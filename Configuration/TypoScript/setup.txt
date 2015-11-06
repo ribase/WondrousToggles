@@ -1,0 +1,5 @@
+plugin.tx_Wondrous.ToggleContent.view {
+	templateRootPaths.0 = {$plugin.tx_Wondrous.ToggleContent.view.templateRootPaths.default}
+	partialRootPaths.0 = {$plugin.tx_Wondrous.ToggleContent.view.partialRootPaths.default}
+	layoutRootPaths.0 = {$plugin.tx_Wondrous.ToggleContent.view.layoutRootPaths.default}
+}
