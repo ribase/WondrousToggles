@@ -3,10 +3,10 @@
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-	<f:layout name="{v:extension.loaded(extensionName: 'fluidcontent_core', then: 'ContentCore', else: 'Content')}" />
+	<f:layout name="Content"/>
 
 	<f:section name="Configuration">
-		<flux:form id="example" options="{group: 'FCE'}">
+		<flux:form id="toggle">
 
 			<flux:form.sheet name="subheadline" label="Subheadline">
 				<flux:field.input name="settings.subheadline" label="Whatever" enableRichText="1" />

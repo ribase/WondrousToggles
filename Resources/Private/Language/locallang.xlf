@@ -9,10 +9,10 @@
 			<trans-unit id="flux.standard.description">
 				<source>Description can be entered in LLL file locallang.xlf of extension test</source>
 			</trans-unit>
-			<trans-unit id="flux.example">
+			<trans-unit id="flux.toggle">
 				<source>Toggle Element</source>
 			</trans-unit>
-			<trans-unit id="flux.example.description">
+			<trans-unit id="flux.toggle.description">
 				<source>Toggle Element</source>
 			</trans-unit>
 		</body>
