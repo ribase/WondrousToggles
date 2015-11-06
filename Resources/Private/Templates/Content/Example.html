@@ -1,23 +1,45 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-	xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-	xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
-	<f:layout name="Content" />
+	<f:layout name="{v:extension.loaded(extensionName: 'fluidcontent_core', then: 'ContentCore', else: 'Content')}" />
 
 	<f:section name="Configuration">
 		<flux:form id="example" options="{group: 'FCE'}">
-			<!-- Insert fields, sheets, grid, form section objects etc. here, in this flux:flexform tag -->
+
+			<flux:form.sheet name="subheadline" label="Subheadline">
+				<flux:field.input name="settings.subheadline" label="Whatever" enableRichText="1" />
+			</flux:form.sheet>
+
+			<flux:form.sheet name="Text" label="Text">
+				<flux:field.text name="settings.teasertext" label="Whatever" enableRichText="1" />
+			</flux:form.sheet>
+
 		</flux:form>
 	</f:section>
 
 	<f:section name="Preview">
-		<!-- If you wish, place custom backend preview content here -->
+
 	</f:section>
 
 	<f:section name="Main">
-		<h3>I am a content element!</h3>
-		<p>
-			My template file is EXT:toggle_content/Resources/Private/Content/Example.html.
-		</p>
+		<div class="toggle-element">
+				<h2 class="headline">
+					<v:tag name="h{settings.content.settings.header.type -> v:or(alternative: record.header_layout) -> v:or(alternative: settings.header.type)}"
+						   class="{settings.content.settings.header.className}" hideIfEmpty="{settings.content.settings.header.hideIfEmpty -> v:or(alternative: 1)}">
+						{record.header -> f:format.raw()}
+					</v:tag>
+				</h2>
+				<h3 class="headline">
+					<f:format.html>{settings.subheadline}</f:format.html>
+				</h3>
+
+				<f:format.html>{settings.teasertext}</f:format.html>
+			</div>
+		</div>
 	</f:section>
 </div>
+
+
+
