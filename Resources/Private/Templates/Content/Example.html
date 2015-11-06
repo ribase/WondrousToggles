@@ -27,12 +27,12 @@
 						{record.header -> f:format.raw()}
 					</v:tag>
 				</h2>
-				<h3 class="headline">
+				<h4>
 					<v:tag name="h{settings.content.settings.subheader.type -> v:or(alternative: record.subheader_layout) -> v:or(alternative: settings.subheader.type)}"
 						   class="{settings.content.settings.subheader.className}" hideIfEmpty="{settings.content.settings.subheader.hideIfEmpty -> v:or(alternative: 1)}">
 						{record.subheader -> f:format.raw()}
 					</v:tag>
-				</h3>
+				</h4>
 
 				<f:format.html>{settings.teasertext}</f:format.html>
 			</div>
