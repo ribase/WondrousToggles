@@ -8,10 +8,6 @@
 	<f:section name="Configuration">
 		<flux:form id="toggle">
 
-			<flux:form.sheet name="subheadline" label="Subheadline">
-				<flux:field.input name="settings.subheadline" label="Subheadline" />
-			</flux:form.sheet>
-
 			<flux:form.sheet name="Text" label="Text">
 				<flux:field.text name="settings.teasertext" label="Text" enableRichText="1" />
 			</flux:form.sheet>
@@ -32,7 +28,10 @@
 					</v:tag>
 				</h2>
 				<h3 class="headline">
-					<f:format.html>{settings.subheadline}</f:format.html>
+					<v:tag name="h{settings.content.settings.subheader.type -> v:or(alternative: record.subheader_layout) -> v:or(alternative: settings.subheader.type)}"
+						   class="{settings.content.settings.subheader.className}" hideIfEmpty="{settings.content.settings.subheader.hideIfEmpty -> v:or(alternative: 1)}">
+						{record.subheader -> f:format.raw()}
+					</v:tag>
 				</h3>
 
 				<f:format.html>{settings.teasertext}</f:format.html>
