@@ -21,21 +21,20 @@
 
 	<f:section name="Main">
 		<div class="toggle-element">
-				<h2 class="headline">
-					<v:tag name="h{settings.content.settings.header.type -> v:or(alternative: record.header_layout) -> v:or(alternative: settings.header.type)}"
-						   class="{settings.content.settings.header.className}" hideIfEmpty="{settings.content.settings.header.hideIfEmpty -> v:or(alternative: 1)}">
-						{record.header -> f:format.raw()}
-					</v:tag>
-				</h2>
-				<h4>
-					<v:tag name="h{settings.content.settings.subheader.type -> v:or(alternative: record.subheader_layout) -> v:or(alternative: settings.subheader.type)}"
-						   class="{settings.content.settings.subheader.className}" hideIfEmpty="{settings.content.settings.subheader.hideIfEmpty -> v:or(alternative: 1)}">
-						{record.subheader -> f:format.raw()}
-					</v:tag>
-				</h4>
+			<h2 class="headline">
+				<v:tag name="h{settings.content.settings.header.type -> v:or(alternative: record.header_layout) -> v:or(alternative: settings.header.type)}"
+					   class="{settings.content.settings.header.className}" hideIfEmpty="{settings.content.settings.header.hideIfEmpty -> v:or(alternative: 1)}">
+					{record.header -> f:format.raw()}
+				</v:tag>
+			</h2>
+			<h4>
+				<v:tag name="h{settings.content.settings.subheader.type -> v:or(alternative: record.subheader_layout) -> v:or(alternative: settings.subheader.type)}"
+					   class="{settings.content.settings.subheader.className}" hideIfEmpty="{settings.content.settings.subheader.hideIfEmpty -> v:or(alternative: 1)}">
+					{record.subheader -> f:format.raw()}
+				</v:tag>
+			</h4>
 
-				<f:format.html>{settings.teasertext}</f:format.html>
-			</div>
+			<f:format.html>{settings.teasertext}</f:format.html>
 		</div>
 	</f:section>
 </div>
