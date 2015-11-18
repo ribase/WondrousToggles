@@ -12,6 +12,10 @@
 				<flux:field.text name="settings.teasertext" label="Text" enableRichText="1" />
 			</flux:form.sheet>
 
+			<flux:form.sheet name="Image" label="Image">
+				<flux:field.file name="settings.images" multiple="FALSE" maxItems="1" label="Image"/>
+			</flux:form.sheet>
+
 		</flux:form>
 	</f:section>
 
@@ -35,6 +39,12 @@
 			</h4>
 
 			<f:format.html>{settings.teasertext}</f:format.html>
+			<f:if condition="{settings.images}">
+				<div class="toggle-picture">
+					<f:image src="{settings.images}"/>
+				</div>
+			</f:if>
+
 		</div>
 	</f:section>
 </div>
