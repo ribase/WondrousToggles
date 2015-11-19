@@ -24,32 +24,29 @@
 	</f:section>
 
 	<f:section name="Main">
-		<div class="accordion-toggle">
-			<h2 class="headline">
+		<section>
+			<header>
+				<h2 class="headline">
 				<v:tag name="h{settings.content.settings.header.type -> v:or(alternative: record.header_layout) -> v:or(alternative: settings.header.type)}"
 					   class="{settings.content.settings.header.className}" hideIfEmpty="{settings.content.settings.header.hideIfEmpty -> v:or(alternative: 1)}">
 					{record.header -> f:format.raw()}
 				</v:tag>
 			</h2>
-			<h4>
-				<v:tag name="h{settings.content.settings.subheader.type -> v:or(alternative: record.subheader_layout) -> v:or(alternative: settings.subheader.type)}"
-					   class="{settings.content.settings.subheader.className}" hideIfEmpty="{settings.content.settings.subheader.hideIfEmpty -> v:or(alternative: 1)}">
-					{record.subheader -> f:format.raw()}
-				</v:tag>
-			</h4>
-		</div>
-		<div class="accordion-content">
-			<f:format.html>{settings.teasertext}</f:format.html>
-			<f:if condition="{settings.images}">
-				<div class="toggle-picture">
-					<f:image src="{settings.images}"/>
-				</div>
-			</f:if>
-		</div>
+				<h4>
+					<v:tag name="h{settings.content.settings.subheader.type -> v:or(alternative: record.subheader_layout) -> v:or(alternative: settings.subheader.type)}"
+						   class="{settings.content.settings.subheader.className}" hideIfEmpty="{settings.content.settings.subheader.hideIfEmpty -> v:or(alternative: 1)}">
+						{record.subheader -> f:format.raw()}
+					</v:tag>
+				</h4>
+			</header>
+			<div class="content">
+				<f:format.html>{settings.teasertext}</f:format.html>
+				<f:if condition="{settings.images}">
+					<div class="toggle-picture">
+						<f:image src="{settings.images}"/>
+					</div>
+				</f:if>
+			</div>
+		</section>
 	</f:section>
 </div>
-
-
-
-
-
