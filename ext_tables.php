@@ -5,5 +5,5 @@ if (!defined('TYPO3_MODE')) {
 
 TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'ToggleContent');
 
-\FluidTYPO3\Flux\Core::registerProviderExtensionKey('Wondrous.ToggleContent', 'Content');
+\FluidTYPO3\Flux\Core::registerProviderExtensionKey('wondroustoggles', 'Content');
 
