@@ -1,4 +1,4 @@
-plugin.tx_Wondrous.ToggleContent.view {
+plugin.tx_wondroustoggles.view {
 	templateRootPaths.default = EXT:wondroustoggles/Resources/Private/Templates/
 	partialRootPaths.default = EXT:wondroustogglest/Resources/Private/Partials/
 	layoutRootPaths.default = EXT:wondroustoggles/Resources/Private/Layouts/
