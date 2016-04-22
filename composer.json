@@ -7,5 +7,9 @@
     "support": {
         "issues": "https://github.com/ribase/WondrousToggles/"
     },
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "replace": {
+        "Vendor.WondrousToggles": "self.version",
+        "ribase/WondrousToggles": "self.version"
+    }
 }
