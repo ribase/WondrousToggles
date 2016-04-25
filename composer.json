@@ -9,7 +9,7 @@
     },
     "version": "0.0.1",
     "replace": {
-        "Vendor.WondrousToggles": "self.version",
-        "ribase/WondrousToggles": "self.version"
+        "toggle_content": "self.version",
+        "Vendor.WondrousToggles": "self.version"
     }
 }
