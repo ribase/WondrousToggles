@@ -13,15 +13,15 @@
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'ToggleContent',
 	'description' => 'ToggleContent',
-	'category' => 'misc',
+	'category' => 'frontend',
 	'shy' => 0,
-	'version' => '0.0.1',
+	'version' => '1.0.0',
 //	'dependencies' => 'cms,extbase,fluid,flux,fluidcontent,vhs',
 	'conflicts' => '',
 	'priority' => '',
 	'loadOrder' => '',
 	'module' => '',
-	'state' => 'experimental',
+	'state' => 'stable',
 	'uploadfolder' => 0,
 	'createDirs' => '',
 	'modify_tables' => '',
@@ -34,12 +34,8 @@ $EM_CONF[$_EXTKEY] = array(
 	'CGLcompliance_note' => '',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '4.5-6.2.99',
-			'cms' => '',
-			'extbase' => '',
-			'fluid' => '',
+			'typo3' => '7.6-7.6.99',
 			'flux' => '',
-			
 			'fluidcontent' => '',
 			'vhs' => '',
 		),

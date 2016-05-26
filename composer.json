@@ -1,15 +1,19 @@
 {
-    "name": "ribase/WondrousToggles",
+    "name": "ribase/wondroustoggles",
     "type": "typo3-cms-extension",
     "description": "todo",
     "license": ["GPL-2.0+"],
-    "keywords": ["TYPO3 CMS", "WondrousToggles"],
+    "keywords": ["TYPO3 CMS", "wondroustoggles"],
     "support": {
         "issues": "https://github.com/ribase/WondrousToggles/"
     },
-    "version": "0.0.1",
+    "require": {
+        "typo3-ter/fluidcontent" : "~4.4.1",
+        "typo3-ter/flux" : "~7.4.0",
+        "typo3-ter/vhs" : "~2.4.0"
+    },
+    "version": "1.0.0",
     "replace": {
-        "toggle_content": "self.version",
-        "Vendor.WondrousToggles": "self.version"
+        "toggle_content": "self.version"
     }
 }
